@@ -1,0 +1,432 @@
+//// form ////
+.wpcf7 {
+  input[type="text"],
+  input[type="url"],
+  input[type="email"],
+  input[type="tel"] {
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: rgba(28, 32, 33, 0.6);
+    width: 100%;
+    padding: 21px 28px 21px;
+    outline: none;
+  }
+
+  input.wpcf7-submit {
+    background: $color-btn1;
+    border-radius: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: .04em;
+    color: $color-text-btn1;
+    padding: 19px 21px 19px;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-btnHover;
+      color: $color-text-btn1;
+    }
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .wpcf7-form-control-wrap {
+    position: relative;
+    display: block;
+  }
+  .use-floating-validation-tip .wpcf7-not-valid-tip,
+  .wpcf7-not-valid-tip {
+    //color: #dc3232;
+    font-weight: 400;
+    font-size: 12px;
+    color: #1C2021;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    height: 40px;
+    top: 2px;
+    left: 0;
+    background-color: #fff;
+    border:1px solid #D9D9D9;
+    box-shadow: 0px 4px 7px rgba(14, 13, 13, 0.16);
+    padding: 8px 8px 8px 40px;
+    width: auto;
+    border-radius: 4px;
+    background-image: url("../images/dist/form-err.png");
+    background-repeat: no-repeat;
+    background-position: 8px;
+    //&:before{
+    //  content: '';
+    //  width: 24px;
+    //  height: 24px;
+    //  display: block;
+    //  background-image: url("../images/dist/form-err.png");
+    //  margin-right: 8px;
+    //}
+    &:before {
+      border-left: solid transparent 5px;
+      border-right: solid transparent 5px;
+      border-bottom: solid #fff 7px;
+      top: -7px;
+      content: " ";
+      height: 0;
+      left: 40px;
+      //margin-left: -13px;
+      position: absolute;
+      width: 0;
+    }
+    &:after {
+      border-left: solid transparent 7px;
+      border-right: solid transparent 7px;
+      border-bottom: solid #d9d9d9 8px;
+      top: -8px;
+      content: " ";
+      height: 0;
+      left: 40px;
+      margin-left: -2px;
+      position: absolute;
+      width: 0;
+      z-index: -1;
+    }
+  }
+
+  form .wpcf7-response-output {
+    text-align: center;
+    margin: 0.5em 0.5em 1em;
+    font-size: 14px;
+  }
+}
+
+//// footer ////
+.footer {
+  background-color: $bg-footer;
+  padding: 140px 0 0;
+  color: $color-text-footer;
+  @include for-e-lg-down {
+    padding-top: 100px;
+  }
+
+  @include for-lg-down {
+    padding-top: 80px;
+  }
+  @include for-md-down {
+    padding-top: 50px;
+    overflow: hidden;
+  }
+  .footer__contact-us__thans-popup{
+    &.visible {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 101;
+      border-radius: 40px;
+    }
+    .text {
+      background: #0F1112;
+      border-radius: 32px;
+      color: #fff;
+      padding: 21px;
+      width: 88%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: 40px;
+      @include for-sm-down{
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    }
+  }
+  &__contact-us{
+    margin-bottom: 180px;
+    @include for-lg-down{
+      margin-bottom: 120px;
+    }
+    @include for-md-down {
+      margin-bottom: 80px;
+    }
+    &__info{
+      @include for-lg-down{
+        display: flex;
+        align-items: center;
+      }
+      @include for-md-down{
+       flex-direction: column-reverse;
+       }
+
+
+      ul{
+        a{
+          font-weight: 500;
+          font-size: 20px;
+          letter-spacing: 0.01em;
+          color:$color-text-footer;
+          margin-bottom: 21px;
+          &:hover{
+            color: $menu-footer-hover;
+          }
+          @include for-lg-down{
+            font-size: 16px;
+          }
+        }
+      }
+
+    }
+    &__info-box{
+      @include for-lg-down{
+        width: 50%;
+      }
+      @include for-md-down{
+        width: 100%;
+      }
+    }
+    &__image{
+      @include for-lg-down{
+        width: 50%;
+      }
+      @include for-md-down{
+        width: 100%;
+        text-align: center;
+        img,svg{
+          max-height: 200px;
+          width: auto;
+        }
+      }
+    }
+    &__form-wrap{
+      background-color: #fff;
+      color: $text-black;
+      padding: 38px;
+      border-radius: 40px;
+      @include for-md-down{
+        padding: 20px;
+      }
+      h2{
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.4;
+        color: #1C2021;
+        margin-bottom: 36px;
+        @include for-e-lg-down{
+          font-size: 26px;
+        }
+        @include for-md-down{
+          font-size: 22px;
+        }
+      }
+      h3{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        margin-bottom: 4px;
+        @include for-e-lg-down{
+          font-size: 20px;
+        }
+        @include for-md-down{
+          font-size: 18px;
+        }
+      }
+
+    }
+
+  }
+  .contact-title {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 28px;
+  }
+  .form-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wpcf7{
+    sup {
+      color: #E75757;
+    }
+    input[type=email],
+    input[type=tel],
+    input[type=text],
+    input[type=url] {
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+    input.wpcf7-submit {
+        margin-top: 28px;
+        width: 100%;
+      @include for-sm-down {
+        margin-top: 10px;
+      }
+    }
+    label {
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    legend{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+      margin-bottom: 10px;
+      @include for-e-lg-down{
+        font-size: 18px;
+      }
+    }
+    .wpcf7-list-item {
+      display: block;
+      margin: 0 10px 15px;
+    }
+    .wpcf7-not-valid-tip{
+      top: calc(100% - 13px);
+      bottom: 0 ;
+    }
+     .form-checkbox  {
+      margin-bottom: 20px;
+    }
+  }
+
+  .wpcf7-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    @include for-sm-down {
+      justify-content: center;
+    }
+    label {
+      position: relative;
+      cursor: pointer;
+    }
+    input{
+      visibility: hidden;
+      position: absolute;
+    }
+    .wpcf7-list-item{
+      margin: 0 20px 15px 0;
+      @include for-sm-down{
+        margen: 0 10px 15px 10px;
+      }
+    }
+    input[type=checkbox] + span{
+      display: inline-block;
+      padding: 12px 24px;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      background: #fafafa;
+      border-radius: 32px;
+    }
+    input[type=checkbox]:checked + span {
+      background-color: $color-btn1;
+      color: $color-text-btn1;
+    }
+  }
+  span.wpcf7-list-item {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__logo{
+
+    padding: 0 55px;
+    line-height: 1;
+    svg,
+    img{
+      max-width: 200px;
+    }
+    @include for-lg-down{
+      padding: 0;
+    }
+    @include for-md-down{
+      margin-bottom: 20px;
+    }
+  }
+  &__logo-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include for-md-down{
+      flex-direction: column;
+    }
+  }
+  .menu{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      @include for-sm-down {
+        flex-direction: column;
+      }
+
+    li{
+      padding: 0 0px;
+      @include for-lg-down{
+        padding:0 15px;
+      }
+      @include for-md-down {
+        padding: 0;
+      }
+      a{
+        color: $menu-footer;
+        padding: 0 25px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: center;
+        letter-spacing: 0.01em;
+        &:hover{
+          text-decoration: none;
+          color:$menu-footer-hover;
+        }
+        @include for-e-lg-down{
+          font-size: 16px;
+        }
+        @include for-lg-down{
+          padding: 5px 15px;
+        }
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+
+  }
+  &__copyright{
+    padding: 30px 0;
+    justify-content: center;
+	text-align: center;
+    font-size: 18px;
+    color: $menu-footer;
+    a{
+      color: $menu-footer;
+      &:hover{
+        color: $menu-footer-hover;
+      }
+    }
+    @include for-e-lg-down{
+      font-size: 16px;
+    }
+
+  }
+
+}

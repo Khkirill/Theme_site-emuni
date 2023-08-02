@@ -1,0 +1,67 @@
+////// color
+$blackFirst: #0F1112;
+$black: #1C2021;
+
+$gray: #F8F5F2;
+
+/////
+$blackBG: $black;
+$grayBG: $gray;
+
+$text-gold: #FFC933;
+$text-black: #1C2021;
+$text-white: #fff;
+//// ---- Color Button
+$color-one:  #389B48;
+$color-two:  #FFD666;
+$color-three:  #216F2D;
+
+///////// header
+$header-color-fix: #fff ;
+$header-bg: #0F1112;
+$menu-color: $text-white ;
+$menu-color-hover: $color-one;
+///// menu fixed
+$menu-color-fix: #000;
+
+
+//// title and subtitle
+$color-subtitle: #333;
+$color-title:$black;
+$color-title-second: #fff;
+$color-font-write: #fff;
+$color-title-one: $header-bg;
+
+//// btn / link
+$color-btn1: $color-one;
+$color-btnHover: $color-three;
+$color-text-btn1: $color-font-write;
+
+$color-btn2: #ff9b00;
+$color-text-btn2: #fff;
+
+$color-link:  $color-one;
+$color-link-black:  #333;
+$color-link-hover:  #000;
+
+$color-add-grey: #e0e0e0;
+$color-add-background: #f7f7f9;
+//$color-text: #333333;
+
+/// footer
+$bg-footer:#0F1112;
+$color-text-footer:#fff;
+$border-footer: $color-one;
+$menu-footer: #fff;
+$menu-footer-hover:$color-one;
+
+
+$body-text-color: #333;
+$body-fontsize: 18px;
+$body-fontsize-mob: 16px;
+$lineheight: 1.8;
+$text-font-weight: 400;
+$body-font: 'Inter', sans-serif;
+$title-font: 'Inter', sans-serif;
+$sub-title-font: 'Inter', sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;

@@ -1,0 +1,36 @@
+#backToTop {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 99;
+  //border: none;
+  outline: none;
+  background-color: #fff;
+  border:1px solid $color-link;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px 0 rgb(0 0 0 / 10%);
+  border-radius: 50%;
+  svg path{
+    fill: $color-link;
+    transition: all 0.3s ease-in-out;
+  }
+  &:active,
+  &:hover {
+    background-color: $color-link;
+    svg path{
+      fill:#fff;
+    }
+  }
+  @include for-md-down {
+    right: 10px;
+  }
+  @include for-sm-down {
+    bottom: 40px;
+  }
+}

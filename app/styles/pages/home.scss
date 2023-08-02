@@ -1,0 +1,385 @@
+.loaded{
+
+  .main-first__left__title{
+
+  }
+  .main-first__right{
+    opacity: 1;
+    transform: translateZ(0);
+    transition: all 0.6s ease-in-out;
+  }
+  .main-first__left{
+    opacity: 1;
+    transform: translateZ(0);
+    transition: all 0.6s ease-in-out;
+  }
+  .main-first__slider{
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+.main-first {
+  background-color: $blackFirst;
+  height: 105vh;
+  min-height: 867px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 165px 0px 40px;
+  @include for-md-down {
+    padding: 100px 0px 40px;
+    height: 100vh;
+    .row{
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  &__left {
+    transform: translate3d(-100px,0,0);
+    opacity: 0;
+    &__title {
+      h1 {
+        font-weight: 700;
+        font-size: 68px;
+        color: $text-white;
+        @include for-e-lg-down {
+          font-size: 48px;
+        }
+        @include for-md-down{
+          font-size: 38px;
+        }
+        @include for-sm-down{
+          font-size: 32px;
+        }
+
+      }
+
+    }
+
+    &__description {
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: 0.01em;
+      color: $text-white;
+      margin-bottom: 30px;
+      @include for-e-lg-down {
+        font-size: 20px;
+      }
+
+      @include for-sm-down{
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__right {
+    transform: translate3d(100px,0,0);
+    opacity: 0;
+    @include for-lg-down{
+     display: flex;
+      align-items: center;
+    }
+    @include for-md-down{
+      justify-content: center;
+
+    }
+
+    img, svg {
+      width: 100%;
+      height: auto;
+      @include for-md-down{
+        height: auto;
+        max-height: 225px;
+        width: auto;
+      }
+    }
+  }
+  &__slider{
+    opacity: 0;
+  }
+  &__slider__image{
+    text-align: center;
+  }
+
+}
+.other-page{
+  .main-first{
+    .row{
+      justify-content: space-between;
+    }
+    &__left__description{
+      font-size: 18px;
+    }
+  }
+}
+.sc-second {
+  &.black-bg {
+    .container-bg {
+      background-color: $black;
+
+      p {
+        color: $text-white;
+
+      }
+    }
+  }
+
+  &__left {
+    text-align: center;
+  }
+
+  &__right {
+    p {
+      font-size: 24px;
+      line-height: 1.3;
+      @include for-e-lg-down {
+        font-size: 20px;
+      }
+      @include for-md-down {
+        font-size: 18px;
+      }
+    }
+  }
+  .yes_add_bottom{
+    padding-bottom: 140px;
+    @include for-e-lg-down {
+      padding-bottom: 100px;
+    }
+    @include for-lg-down {
+      padding-bottom: 80px;
+    }
+    @include for-md-down {
+      padding-bottom: 50px;
+    }
+  }
+  &__bottom {
+
+    &__wrapper {
+      padding-right: 40px;
+      position: relative;
+      @include for-sm-down {
+        padding-right: 10px;
+      }
+    }
+
+    &__title {
+      color: $text-gold;
+      margin-bottom: 24px;
+    }
+
+    &__description p {
+      font-size: 20px;
+      line-height: 1.6;
+      @include for-e-lg-down {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .arrow-to-sc {
+    position: absolute;
+    top: 95px;
+    left: 100%;
+    width: 201px;
+    @include for-e-lg-down {
+      svg {
+        width: 160px;
+      }
+    }
+    @include for-lg-down{
+      top: 93%;
+      width: 100px;
+    }
+    @include for-sm-down{
+      //top: 93%;
+      //right: 0;
+      //left: auto;
+      //width: 85px;
+      display: none;
+    }
+  }
+}
+
+//////////////
+.sc-image-text {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &.left_text {
+      flex-direction: row-reverse;
+      .sc-image-text__image {
+        text-align: right;
+      }
+    }
+
+  }
+  &__image{
+    @include for-md-down{
+      margin-bottom: 15px;
+    }
+  }
+  .btn {
+    margin-top: 25px;
+  }
+}
+
+//////////////////
+.sc-subscribe {
+  .title-section {
+    font-size: 32px;
+    @include for-e-lg-down {
+      font-size: 26px;
+    }
+    @include for-lg-down {
+      font-size: 24px;
+    }
+    @include for-md-down {
+      font-size: 22px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    @include for-lg-down{
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    @include for-lg-down{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 1.5;
+      @include for-e-lg-down {
+        font-size: 22px;
+      }
+      @include for-lg-down {
+        font-size: 20px;
+      }
+      @include for-md-down {
+        font-size: 18px;
+      }
+    }
+  }
+
+  input.wpcf7-submit {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+
+  .wpcf7 {
+    .sent {
+      .wpcf7-response-output {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        color: #000;
+        border-color: transparent !important;
+        border-radius: 40px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+        font-size: 15px;
+      }
+    }
+    .use-floating-validation-tip .wpcf7-not-valid-tip,
+    .wpcf7 .wpcf7-not-valid-tip{
+      top: calc(100% + 10px);
+    }
+  }
+
+}
+//////////////// section
+.who-are {
+  padding-bottom: 0;
+
+  .container-bg {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  &__text {
+    margin-bottom: 80px;
+
+    &.variable-color h2.title-section {
+      color: $text-gold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.5;
+      @include for-e-lg-down {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    @include for-md-down{
+      max-width: 480px;
+      margin: 0 auto 20px;
+    }
+    &:nth-child(3n - 2) {
+      .who-are__bg-wrap {
+        background-color: $gray;
+      }
+
+    }
+  }
+
+  &__bg-wrap {
+    display: flex;
+    background-color: $color-two;
+    height: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    @include for-lg-down{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    text-align: center;
+  }
+
+  &__description {
+    padding-top: 15px;
+    padding-left: 24px;
+    padding-right: 8px;
+
+    p {
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+
+    @include for-e-lg-down {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    @include for-lg-down{
+      width: 100%;
+      padding: 0;
+    }
+    @include for-md-down{
+        text-align: center;
+
+    }
+  }
+}
